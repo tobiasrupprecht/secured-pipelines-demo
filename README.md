@@ -21,7 +21,7 @@ bash 03_setup_tfc.sh tf
 
 For AWS:
 ```
-bash 04a_configure_aws_secrets.sh tf
+AWS_SECRET_ACCESS_KEY=YOUR_KEY AWS_ACCESS_KEY_ID=YOUR_KEY_ID bash 04a_configure_aws_secrets.sh tf
 ```
 
 For Azure:
