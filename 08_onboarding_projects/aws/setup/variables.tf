@@ -1,2 +1,2 @@
 variable "project_name" {}
-variable "tfe_organization" { default="mkaesz-dev"}
+variable "tfe_organization" { default="hashicorp-tobiasrupprecht"}
