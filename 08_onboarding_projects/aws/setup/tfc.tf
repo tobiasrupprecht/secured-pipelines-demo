@@ -1,3 +1,4 @@
+variable "oauth_token_id" {}
 provider tfe {
 }
 
@@ -35,6 +36,6 @@ resource "tfe_policy_set" "terraform-version" {
     identifier         = "tobiasrupprecht/secured-pipelines-demo"
     branch             = "main"
     ingress_submodules = false
-    oauth_token_id     = "ot-YDuaRAHY65HVgA2D"
+    oauth_token_id     = var.oauth_token_id
   }
 }
