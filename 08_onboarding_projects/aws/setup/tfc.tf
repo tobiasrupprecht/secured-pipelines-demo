@@ -24,17 +24,17 @@ resource "tfe_team_access" "secured-pipeline-project" {
   workspace_id = tfe_workspace.secured-pipeline-project.id
 }
 
-#resource "tfe_policy_set" "terraform-version" {
-#  name          = "terraform-version"
-#  description   = "Checking the terraform version"
-#  organization  = var.tfe_organization
-#  policies_path = "sentinel/"
-#  workspace_ids = [tfe_workspace.secured-pipeline-project.id]
+resource "tfe_policy_set" "terraform-version" {
+  name          = "terraform-version"
+  description   = "Checking the terraform version"
+  organization  = var.tfe_organization
+  policies_path = "sentinel/"
+  workspace_ids = [tfe_workspace.secured-pipeline-project.id]
 
-#  vcs_repo {
-#    identifier         = "tobiasrupprecht/secured-pipelines-demo"
-#    branch             = "main"
-#    ingress_submodules = false
-#    oauth_token_id     = "ot-YDuaRAHY65HVgA2D"
-#  }
-#}
+  vcs_repo {
+    identifier         = "tobiasrupprecht/secured-pipelines-demo"
+    branch             = "main"
+    ingress_submodules = false
+    oauth_token_id     = "ot-YDuaRAHY65HVgA2D"
+  }
+}
