@@ -26,7 +26,7 @@ resource "tfe_team_access" "secured-pipeline-project" {
 }
 
 resource "tfe_policy_set" "terraform-version" {
-  name          = "terraform-version"
+  name          = var.project_name
   description   = "Checking the terraform version"
   organization  = var.tfe_organization
   policies_path = "sentinel/"
